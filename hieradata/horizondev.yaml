@@ -1,0 +1,12 @@
+---
+#classes : ['hiera_test', 'monit', 'provenir', 'commercial_app_provenir_7']
+classes : ['hiera_test']
+provenir::repository::repo_web_app::app_server : 'tomcat6'
+provenir::repository::repo_web_app::tomcat_home : '/usr/share/tomcat6'
+provenir::repository::repo_web_app::web_app : 'Repository70.war'
+provenir::version : '7'
+provenir::jms_provider : 'openjms'
+provenir::base_dir : '/opt/Provenir'
+provenir::jar_level : 'dcs'
+
+tomcat::ldap_auth : 'false'

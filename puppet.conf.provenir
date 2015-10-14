@@ -1,0 +1,62 @@
+[main]
+    # The Puppet log directory.
+    # The default value is '$vardir/log'.
+    logdir = /var/log/puppet
+
+    # Where Puppet PID files are kept.
+    # The default value is '$vardir/run'.
+    rundir = /var/run/puppet
+
+    # Where SSL certificates are kept.
+    # The default value is '$confdir/ssl'.
+    ssldir = $vardir/ssl
+
+    # added from jpmc-de
+    vardir = /var/lib/puppet
+    logdir = /var/log/puppet
+    #modulepath = $confdir/environments/$environment/modules:/etc/puppet/modules
+    modulepath = $confdir/environments/$environment/modules
+    user = puppet
+    group = puppet
+    archive_files = true
+    archive_file_server = puppet.provenir.com
+    ldapserver=192.168.40.101
+    ldapbase=dc=commercial,dc=app
+    ldapuser=cn=manager,dc=commercial,dc=app
+    ldappassword=Provenir1
+
+[master]
+    reports = store, http
+    reporturl = http://puppet.provenir.com:3000/reports/upload
+    #node_terminus = exec
+    #external_nodes = /usr/bin/env PUPPET_DASHBOARD_URL=http://localhost:3000 /usr/share/puppet-dashboard/bin/external_node
+    # added for nagios
+    storeconfigs = true
+#    storeconfigs = false
+    dbadapter = mysql
+    dbname = puppet
+    #dbname = puppet_stored_configs
+    dbuser = puppet
+    dbpassword = teppup
+    dbserver = puppet.provenir.com
+
+[agent]
+    # The file in which puppetd stores a list of the classes
+    # associated with the retrieved configuratiion.  Can be loaded in
+    # the separate ``puppet`` executable using the ``--loadclasses``
+    # option.
+    # The default value is '$confdir/classes.txt'.
+    classfile = $vardir/classes.txt
+
+    # Where puppetd caches the local configuration.  An
+    # extension indicating the cache format is added automatically.
+    # The default value is '$confdir/localconfig'.
+    localconfig = $vardir/localconfig
+    pluginsync = true
+
+[development]
+    manifest = $confdir/environments/development/manifests/site.pp
+
+[testing]
+    manifest = $confdir/environments/testing/manifests/site.pp
+

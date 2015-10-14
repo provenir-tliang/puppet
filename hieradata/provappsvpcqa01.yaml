@@ -1,0 +1,4 @@
+---
+classes : ['commercial_app_provenir_7', 'tomee', 'jenkins', 'h2', 'git', 'ant', 'central_auth', 'nagios::target']
+commercial_app_provenir_7::jar_level: 'development'
+provenir::v3_demo: 'true'

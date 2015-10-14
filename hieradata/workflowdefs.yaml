@@ -1,0 +1,4 @@
+---
+classes : ['commercial_app_provenir_7', 'central_auth', 'jenkins', 'tomee', 'git', 'h2']
+provenir::v3_demo: 'true'
+jenkins::jenkins_home: "/opt/jenkins"

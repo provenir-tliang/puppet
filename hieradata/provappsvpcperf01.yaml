@@ -1,0 +1,4 @@
+---
+classes : ['commercial_app_provenir_7', 'central_auth', 'jenkins', 'h2', 'git', 'ant', 'tomee']
+provenir::v3_demo: 'true'
+provenir::jar_level: 'released'

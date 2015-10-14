@@ -1,0 +1,12 @@
+[main]
+  logdir = /var/log/puppet
+  rundir = /var/run/puppet
+  vardir = /var/lib/puppet
+  ssldir = $vardir/ssl
+  pluginsync = true
+  report = true
+  server = puppet
+  environment = production
+  
+  certname = ec2-54-243-144-61.compute-1.amazonaws.com-03d3f5e0-25f5-115b-26fb-dfe4a605f9ff
+  

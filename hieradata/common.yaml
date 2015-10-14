@@ -1,0 +1,6 @@
+---
+classes : [ 'ntp', 's3backup', 'linux_basenode', 'authconfig', 'nagios::target' ]
+
+
+iptables::enable: 'false'
+authconfig::ldapserver: 'puppet.provapps.com:3389'

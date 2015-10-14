@@ -1,0 +1,4 @@
+---
+classes : ['nfsserver', 'authconfig', 'hiera_test', 'ssh::authorized_keys', 'nagios::monitor']
+authconfig::ldapserver : 'puppet.provapps.com:3389'
+hiera_test::hieratest : "This is cool!!"

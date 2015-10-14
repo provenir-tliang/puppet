@@ -1,0 +1,5 @@
+---
+classes : ['commercial_app_provenir_7', 'central_auth']
+provenir::v3_demo: 'true'
+provenir::release: '7.1.0'
+provenir::jar_level: 'released'

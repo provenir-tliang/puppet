@@ -1,0 +1,6 @@
+---
+classes : ['commercial_app_provenir_6', 'central_auth', 'jenkins', 'mysqld', 'mysqld::db::sbapoc_provsba', 'mysqld::db::sbapoc_provews']
+
+commercial_app_provenir_6::port: '7280'
+commercial_app_provenir_6::url: '/ProvAppCommercialWeb'
+
